@@ -33,70 +33,38 @@ A simple Book Management System that allows users to perform CRUD (Create, Read,
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/yourusername/book-management-system.git
-    cd bookManagement
-    ```
+   ```bash
+   git clone https://github.com/Kalinka5/BookManagement.git
+   cd bookManagement
+   ```
 
 2. Create a virtual environment and activate it:
 
-    ```bash
-    python -m venv .venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+   ```
 
 3. Install the required packages:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. Apply migrations to create the database:
 
-    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
 
 5. Run the development server:
 
-    ```bash
-    python manage.py runserver
-    ```
+   ```bash
+   python manage.py runserver
+   ```
 
 6. Open your browser and go to `http://127.0.0.1:8000` to see the application.
-
-## Project Structure
-
-bookManagement/
-│
-├── api/
-│ ├── init.py
-│ ├── admin.py
-│ ├── apps.py
-│ ├── models.py
-│ ├── serializers.py
-│ ├── tests.py
-│ ├── urls.py
-│ └── views.py
-│
-├── bookManagement/
-│ ├── init.py
-│ ├── asgi.py
-│ ├── settings.py
-│ ├── urls.py
-│ └── wsgi.py
-│
-├── static/
-│ ├── css
-│ └── js
-│
-├── templates/
-│ └── index.html
-│
-├── manage.py
-├── db.sqlite3
-└── requirements.txt
 
 ## Django App Details
 
@@ -129,3 +97,13 @@ Provides CRUD actions for the Book model using Django REST framework's ModelView
 
 - Static files (CSS and JavaScript) are stored in the `static` directory.
 - HTML templates are stored in the `templates` directory.
+
+## Improvements
+
+### 1. Use AJAX Requests to Avoid Page Reloads
+
+To improve the user experience, AJAX requests can be used instead of traditional form submissions and page reloads. This will make the application more dynamic and responsive by updating the content without reloading the entire page. JavaScript libraries like jQuery or vanilla JavaScript `fetch` API can be utilized for this purpose.
+
+### 2. Using Frontend Web Frameworks like React.js or Vue.js
+
+For a more modern and scalable frontend, frameworks like React.js or Vue.js can be used. These frameworks provide powerful tools for building complex and interactive user interfaces. They enable component-based architecture, which helps in managing the UI in a more organized and efficient way.
